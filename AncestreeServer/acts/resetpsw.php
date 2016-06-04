@@ -17,9 +17,9 @@ $rs = DB::select('PasswordRecovery', array(
 if (count($rs) < 1) {
     die('<h3>token串错误</h3>');
 }
-$expiredtime = strtotime($rs['ExpiredTime'], 'Y-m-d h:i:s');
+$expiredtime = strtotime($rs['ExpiredTime']);
 if ($expiredtime < time()) {
-    die('<h3>重置期限已过，请重新申请密码重置</h3>');
+    die('<h3>您已重置过密码或重置期限已过，请重新申请密码重置</h3>');
 }
 $id = $rs['UserID'];
 $rs = DB::select('Users', array(
@@ -27,13 +27,18 @@ $rs = DB::select('Users', array(
 ), array(
     'ID' => $id
 ))[0];
-if (DB::update('UserID', array(
-    'Password' => md5($psw . $rs['Email'])
+if (DB::update('Users', array(
+    'Password' => md5($rs['Email'] . $psw)
 ), array(
     'ID' => $id
 )) == 1) {
+    DB::update('PasswordRecovery', array(
+        'ExpiredTime' => date('Y-m-d h:i:s', time())
+    ), array(
+        'UserID' => $id
+    ));
     die('<h3>密码已重置，请重新登录</h3>');
-}else{
+} else {
     die('<h3>密码重置时出现错误</h3>');
 }
 ?>

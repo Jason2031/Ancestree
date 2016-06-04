@@ -1,13 +1,13 @@
 <?php
 require_once 'requiredfiles.php';
 
-$user = $_POST['username'];
+$email = $_POST['email'];
 $psw = $_POST['password'];
 
 $rs = DB::select('Users', array(
     'Password'
 ), array(
-    'ID' => $user
+    'Email' => $email
 ))[0];
 if (count($rs) == 0) {
     $output = array(
@@ -22,7 +22,7 @@ if ($psw == $passwordhash) {
     DB::update('Users', array(
         'NonceToken' => $noncetoken
     ), array(
-        'ID' => $user
+        'Email' => $email
     ));
     $output = array(
         'retcode' => $retcode['OK'],

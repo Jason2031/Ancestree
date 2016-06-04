@@ -1,13 +1,13 @@
 <?php
 require_once 'requiredfiles.php';
 
-$user = $_POST['username'];
+$email = $_POST['email'];
 $psw = $_POST['password'];
 
 $rs = DB::select('Users', array(
     'count(*)'
 ), array(
-    'ID' => $user
+    'Email' => $email
 ))[0];
 if ((int) $rs['count(*)'] >= 1) {
     $output = array(
@@ -17,7 +17,7 @@ if ((int) $rs['count(*)'] >= 1) {
     die(json_encode($output));
 }
 if (DB::insert('Users', array(
-    'ID' => $user,
+    'Email' => $email,
     'Password' => $psw,
     'NonceToken' => md5($psw . 'original token')
 )) < 1) {

@@ -24,7 +24,8 @@ if (DB::insert('PasswordRecovery', array(
     $subject = '=?UTF-8?B?' . base64_encode('no-reply') . '?=';
     $message = '请点击下面的链接以重置密码，10分钟内有效：<br/>';
     $message .= 'http://' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . '/Ancestree/AncestreeServer/?act=resetpswpage&token=' . $token . '<br/>';
-    $message .= '如果不能直接访问，请将此url复制至地址栏再访问。';
+    $message .= '如果不能直接访问，请将此url复制至地址栏再访问。<br/>';
+    $message .= '如果您未曾申请重置密码，请忽略该邮件。';
     $headers = "From: Ancestree \n";
     $headers = "MIME-Version: 1.0\r\n";
     $headers .= "Content-type: text/html; charset=utf-8\r\n";
