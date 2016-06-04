@@ -33,23 +33,27 @@
     
     <EditText
         android:id="@+id/registerLastName"
-        android:layout_marginTop="20dp"
         style="@style/EditTextStyle"
+        android:layout_marginTop="20dp"
         android:hint="@string/lastname"
-        android:inputType="textPassword" >
+        android:maxLength="20"
+        android:inputType="text" >
+
     </EditText>
     
     <EditText
         android:id="@+id/registerFirstName"
         style="@style/EditTextStyle"
         android:hint="@string/firstname"
-        android:inputType="textPassword" >
+        android:maxLength="20"
+        android:inputType="text" >
     </EditText>
 
     <Button
         android:id="@+id/loginButton"
-        android:layout_marginTop="20dp"
         style="@style/ButtonStyle"
+        android:layout_marginTop="20dp"
+        android:onClick="onClickRegister"
         android:text="@string/register" />
 
 </LinearLayout>

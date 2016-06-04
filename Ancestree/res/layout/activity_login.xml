@@ -35,7 +35,8 @@
         android:id="@+id/loginButton"
         android:layout_marginTop="20dp"
         style="@style/ButtonStyle"
-        android:text="@string/login" />
+        android:text="@string/login" 
+        android:onClick="onClickLogin"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -47,14 +48,16 @@
             style="@style/TextButtonStyle"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
-            android:text="@string/resetpsw" />
+            android:text="@string/resetpsw"
+            android:onClick="onClickLoginResetPSW" />
         
         <TextView
             android:id="@+id/loginNewUser"
             style="@style/TextButtonStyle"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:text="@string/newuser" />
+            android:text="@string/newuser"
+            android:onClick="onClickLoginNewUser" />
 
     </RelativeLayout>
 
