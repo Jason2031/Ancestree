@@ -8,6 +8,10 @@
 package com.tsp.bupt.ancestree;
 
 public final class R {
+    public static final class array {
+        public static final int RelationshipArrayForFemale=0x7f040001;
+        public static final int RelationshipArrayForMale=0x7f040000;
+    }
     public static final class attr {
     }
     public static final class dimen {
@@ -18,75 +22,144 @@ public final class R {
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
+        public static final int person_node_thickness=0x7f050002;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int femalenode=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int logo=0x7f020002;
+        public static final int malenode=0x7f020003;
     }
     public static final class id {
-        public static final int LogoImage=0x7f080000;
-        public static final int action_settings=0x7f08000d;
-        public static final int loginButton=0x7f080003;
-        public static final int loginEMail=0x7f080001;
-        public static final int loginNewUser=0x7f080005;
-        public static final int loginPSW=0x7f080002;
-        public static final int loginResetPSW=0x7f080004;
-        public static final int registerConfirmPSW=0x7f080008;
-        public static final int registerEMail=0x7f080006;
-        public static final int registerFirstName=0x7f08000a;
-        public static final int registerLastName=0x7f080009;
-        public static final int registerPSW=0x7f080007;
-        public static final int resetPSWButton=0x7f08000c;
-        public static final int resetPSWEMail=0x7f08000b;
+        public static final int FileID=0x7f090025;
+        public static final int LogoImage=0x7f09000c;
+        public static final int Title=0x7f090024;
+        public static final int action_settings=0x7f090026;
+        public static final int addNodeBirthday=0x7f090004;
+        public static final int addNodeConfirm=0x7f09000a;
+        public static final int addNodeDeathday=0x7f090006;
+        public static final int addNodeFemaleRadio=0x7f090003;
+        public static final int addNodeFirstname=0x7f090001;
+        public static final int addNodeIsAliveSwitch=0x7f090005;
+        public static final int addNodeLastname=0x7f090000;
+        public static final int addNodeMaleRadio=0x7f090002;
+        public static final int addNodePersonsSpinner=0x7f090008;
+        public static final int addNodeRelationshipLayout=0x7f090007;
+        public static final int addNodeRelationshipSpinner=0x7f090009;
+        public static final int downloadListView=0x7f09000b;
+        public static final int loginButton=0x7f09000f;
+        public static final int loginEMail=0x7f09000d;
+        public static final int loginNewUser=0x7f090011;
+        public static final int loginPSW=0x7f09000e;
+        public static final int loginResetPSW=0x7f090010;
+        public static final int mainPageRootLayout=0x7f090012;
+        public static final int menuaddnode=0x7f090028;
+        public static final int menudownloadancestree=0x7f09002b;
+        public static final int menunode=0x7f090027;
+        public static final int menuuploadancestree=0x7f09002a;
+        public static final int menuuploadeanddownload=0x7f090029;
+        public static final int nodeDetailBirthday=0x7f090017;
+        public static final int nodeDetailConfirm=0x7f09001c;
+        public static final int nodeDetailDeathday=0x7f090019;
+        public static final int nodeDetailDelete=0x7f09001b;
+        public static final int nodeDetailFemaleRadio=0x7f090016;
+        public static final int nodeDetailFirstname=0x7f090014;
+        public static final int nodeDetailHiddenRelationshipLayout=0x7f09001a;
+        public static final int nodeDetailIsAliveSwitch=0x7f090018;
+        public static final int nodeDetailLastname=0x7f090013;
+        public static final int nodeDetailMaleRadio=0x7f090015;
+        public static final int registerConfirmPSW=0x7f09001f;
+        public static final int registerEMail=0x7f09001d;
+        public static final int registerFirstName=0x7f090021;
+        public static final int registerLastName=0x7f090020;
+        public static final int registerPSW=0x7f09001e;
+        public static final int resetPSWButton=0x7f090023;
+        public static final int resetPSWEMail=0x7f090022;
     }
     public static final class layout {
-        public static final int activity_login=0x7f030000;
-        public static final int activity_main=0x7f030001;
-        public static final int activity_node_detail=0x7f030002;
-        public static final int activity_register=0x7f030003;
-        public static final int activity_reset_psw=0x7f030004;
+        public static final int activity_add_node=0x7f030000;
+        public static final int activity_download=0x7f030001;
+        public static final int activity_login=0x7f030002;
+        public static final int activity_main=0x7f030003;
+        public static final int activity_node_detail=0x7f030004;
+        public static final int activity_register=0x7f030005;
+        public static final int activity_reset_psw=0x7f030006;
+        public static final int graphline=0x7f030007;
     }
     public static final class menu {
-        public static final int login=0x7f070000;
-        public static final int main=0x7f070001;
-        public static final int node_detail=0x7f070002;
-        public static final int register=0x7f070003;
-        public static final int reset_psw=0x7f070004;
+        public static final int add_node=0x7f080000;
+        public static final int login=0x7f080001;
+        public static final int main=0x7f080002;
+        public static final int node_detail=0x7f080003;
+        public static final int register=0x7f080004;
+        public static final int reset_psw=0x7f080005;
     }
     public static final class string {
-        public static final int action_settings=0x7f050002;
-        public static final int app_name=0x7f050000;
-        public static final int dberror=0x7f05001f;
-        public static final int firstname=0x7f05000f;
-        public static final int hello_world=0x7f050001;
-        public static final int lastname=0x7f05000e;
-        public static final int login=0x7f05000a;
-        public static final int logining=0x7f05001c;
-        public static final int loginsucceed=0x7f05001a;
-        public static final int loginwrongpsw=0x7f05001b;
-        public static final int networktransfererror=0x7f05001e;
-        public static final int newuser=0x7f05000c;
-        public static final int nextstep=0x7f05000d;
-        public static final int nouser=0x7f050013;
-        public static final int pleaseconfirmpsw=0x7f050009;
-        public static final int pleaseinputemail=0x7f050007;
-        public static final int pleaseinputpsw=0x7f050008;
-        public static final int pleasewait=0x7f050012;
-        public static final int register=0x7f050010;
-        public static final int registererrordup=0x7f050017;
-        public static final int registererrormd5error=0x7f050016;
-        public static final int registererrorpswconfirm=0x7f050015;
-        public static final int registererrorpswlength=0x7f050014;
-        public static final int registering=0x7f050019;
-        public static final int registersucceed=0x7f050018;
-        public static final int resetpsw=0x7f05000b;
-        public static final int sendingresetpswemail=0x7f05001d;
-        public static final int sendresetpswmail=0x7f050011;
-        public static final int title_activity_login=0x7f050003;
-        public static final int title_activity_node_detail=0x7f050006;
-        public static final int title_activity_register=0x7f050004;
-        public static final int title_activity_reset_psw=0x7f050005;
+        public static final int action_settings=0x7f060002;
+        public static final int addsuccessful=0x7f060033;
+        public static final int app_name=0x7f060000;
+        public static final int areyousuretodeletenode=0x7f060036;
+        public static final int birthday=0x7f060025;
+        public static final int change=0x7f060035;
+        public static final int confirm=0x7f060031;
+        public static final int dberror=0x7f06001f;
+        public static final int deathday=0x7f060026;
+        public static final int deletenode=0x7f060034;
+        public static final int deletewarinng=0x7f060037;
+        public static final int downloadcomplete=0x7f06003d;
+        public static final int downloading=0x7f060039;
+        public static final int downloadornot=0x7f06003a;
+        public static final int female=0x7f06002b;
+        public static final int firstname=0x7f06000f;
+        public static final int gender=0x7f060029;
+        public static final int hello_world=0x7f060001;
+        public static final int inputancestreetitle=0x7f06003e;
+        public static final int is=0x7f06002d;
+        public static final int isalive=0x7f060028;
+        public static final int isdead=0x7f060027;
+        public static final int lastname=0x7f06000e;
+        public static final int login=0x7f06000a;
+        public static final int logining=0x7f06001c;
+        public static final int loginsucceed=0x7f06001a;
+        public static final int loginwrongpsw=0x7f06001b;
+        public static final int male=0x7f06002a;
+        public static final int menuaddnode=0x7f060020;
+        public static final int menudownloadancestree=0x7f060023;
+        public static final int menunodedetail=0x7f060021;
+        public static final int menuuploadancestree=0x7f060022;
+        public static final int networktransfererror=0x7f06001e;
+        public static final int newuser=0x7f06000c;
+        public static final int nextstep=0x7f06000d;
+        public static final int no=0x7f06002f;
+        public static final int nouser=0x7f060013;
+        public static final int ones=0x7f06002c;
+        public static final int pleaseconfirm=0x7f06003b;
+        public static final int pleaseconfirmpsw=0x7f060009;
+        public static final int pleaseinputemail=0x7f060007;
+        public static final int pleaseinputpsw=0x7f060008;
+        public static final int pleasewait=0x7f060012;
+        public static final int processing=0x7f060032;
+        public static final int register=0x7f060010;
+        public static final int registererrordup=0x7f060017;
+        public static final int registererrormd5error=0x7f060016;
+        public static final int registererrorpswconfirm=0x7f060015;
+        public static final int registererrorpswlength=0x7f060014;
+        public static final int registering=0x7f060019;
+        public static final int registersucceed=0x7f060018;
+        public static final int relationship=0x7f060030;
+        public static final int resetpsw=0x7f06000b;
+        public static final int sendingresetpswemail=0x7f06001d;
+        public static final int sendresetpswmail=0x7f060011;
+        public static final int title_activity_add_node=0x7f060024;
+        public static final int title_activity_download=0x7f060038;
+        public static final int title_activity_login=0x7f060003;
+        public static final int title_activity_node_detail=0x7f060006;
+        public static final int title_activity_register=0x7f060004;
+        public static final int title_activity_reset_psw=0x7f060005;
+        public static final int unsavedwillbelost=0x7f06003c;
+        public static final int yes=0x7f06002e;
     }
     public static final class style {
         /** 
@@ -110,13 +183,14 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
-        public static final int ButtonStyle=0x7f060003;
-        public static final int EditTextStyle=0x7f060002;
-        public static final int TextButtonStyle=0x7f060004;
+        public static final int AppTheme=0x7f070001;
+        public static final int ButtonStyle=0x7f070003;
+        public static final int EditTextStyle=0x7f070002;
+        public static final int TextButtonStyle=0x7f070005;
+        public static final int WarningButtonStyle=0x7f070004;
     }
 }

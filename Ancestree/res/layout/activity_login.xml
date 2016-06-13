@@ -11,15 +11,17 @@
 
     <ImageView
         android:id="@+id/LogoImage"
+        android:layout_marginTop="20dp"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
-        android:src="@drawable/ic_launcher" />
+        android:adjustViewBounds="true"
+        android:src="@drawable/logo" />
 
     <EditText
         android:id="@+id/loginEMail"
         style="@style/EditTextStyle"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:hint="@string/pleaseinputemail"
         android:inputType="textEmailAddress" >
     </EditText>

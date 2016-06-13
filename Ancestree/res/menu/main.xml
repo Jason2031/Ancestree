@@ -2,10 +2,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.tsp.bupt.ancestree.MainActivity" >
 
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_settings"/>
-
+    <group android:id="@+id/menunode">"
+        <item
+        	android:id="@+id/menuaddnode"
+        	android:title="@string/menuaddnode"/>
+    </group>
+    
+    <group android:id="@+id/menuuploadeanddownload">
+        <item
+        	android:id="@+id/menuuploadancestree"
+        	android:title="@string/menuuploadancestree"/>
+        <item
+        	android:id="@+id/menudownloadancestree"
+        	android:title="@string/menudownloadancestree"/>
+    </group>
+    
 </menu>

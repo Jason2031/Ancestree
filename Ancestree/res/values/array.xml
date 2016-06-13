@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="RelationshipArrayForMale">
+        <item>儿子</item>
+        <item>父亲</item>
+    </string-array>
+    <string-array name="RelationshipArrayForFemale">
+        <item>女儿</item>
+        <item>妻子</item>
+    </string-array>
+
+</resources>

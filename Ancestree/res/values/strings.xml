@@ -7,8 +7,7 @@
     <string name="title_activity_login">Ancestree</string>
     <string name="title_activity_register">注册</string>
     <string name="title_activity_reset_psw">重置密码</string>
-    <string name="title_activity_node_detail">NodeDetailActivity</string>
-    
+    <string name="title_activity_node_detail">详细信息</string>
     <string name="pleaseinputemail">请输入您的邮箱</string>
     <string name="pleaseinputpsw">请输入您的密码</string>
     <string name="pleaseconfirmpsw">确认密码</string>
@@ -20,23 +19,50 @@
     <string name="firstname">名</string>
     <string name="register">注册</string>
     <string name="sendresetpswmail">发送重置密码邮件</string>
-    
     <string name="pleasewait">请稍后</string>
     <string name="nouser">该邮箱未注册</string>
-    
     <string name="registererrorpswlength">密码长度不得少于4位</string>
     <string name="registererrorpswconfirm">两次输入的密码不同，请重新输入</string>
     <string name="registererrormd5error">密码加密失败</string>
     <string name="registererrordup">该邮箱已被注册</string>
     <string name="registersucceed">注册成功，请登录</string>
     <string name="registering">註冊中</string>
-    
     <string name="loginsucceed">登录成功，欢迎</string>
     <string name="loginwrongpsw">登录邮箱或密码错误，请检查后再尝试</string>
     <string name="logining">登录中</string>
-    
     <string name="sendingresetpswemail">正在发送重置密码邮件</string>
-
     <string name="networktransfererror">网络传输错误</string>
     <string name="dberror">数据库错误</string>
+    <string name="menuaddnode">添加节点</string>
+    <string name="menunodedetail">节点详情</string>
+    <string name="menuuploadancestree">上传家谱</string>
+    <string name="menudownloadancestree">载入家谱</string>
+    <string name="title_activity_add_node">添加节点</string>
+    <string name="birthday">出生日期</string>
+    <string name="deathday">死亡日期</string>
+    <string name="isdead">已去世</string>
+    <string name="isalive">尚在世</string>
+    <string name="gender">性别</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="ones">的</string>
+    <string name="is">是</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="relationship">关系</string>
+    <string name="confirm">确定</string>
+    <string name="processing">处理中</string>
+    <string name="addsuccessful">添加成功</string>
+    <string name="deletenode">删除节点</string>
+    <string name="change">确认修改</string>
+    <string name="areyousuretodeletenode">您确定要删除这个节点吗？</string>
+    <string name="deletewarinng">若删除该节点的话将一并删除依附与其的节点</string>
+    <string name="title_activity_download">下载家谱</string>
+    <string name="downloading">下载中</string>
+    <string name="downloadornot">是否下载？</string>
+    <string name="pleaseconfirm">请确认</string>
+    <string name="unsavedwillbelost">所有未保存的改变都将失去！</string>
+    <string name="downloadcomplete">下载完成</string>
+    <string name="inputancestreetitle">请输入家谱图的标题</string>
+
 </resources>

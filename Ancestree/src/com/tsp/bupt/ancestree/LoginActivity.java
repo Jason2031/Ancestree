@@ -16,7 +16,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class LoginActivity extends Activity {
@@ -26,6 +28,7 @@ public class LoginActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_login);
 	}
 
@@ -76,7 +79,7 @@ public class LoginActivity extends Activity {
 			data.put("password", MD5.getMD5(email+pswhash));
 		} catch (NoSuchAlgorithmException e) {
 			Toast.makeText(getApplicationContext(),
-					R.string.registererrormd5error, Toast.LENGTH_SHORT);
+					R.string.registererrormd5error, Toast.LENGTH_SHORT).show();
 			return;
 		}
 		
@@ -89,7 +92,7 @@ public class LoginActivity extends Activity {
 			progressDialog.dismiss();
 			if (v.equals("fail")) {
 				Toast.makeText(getApplicationContext(),
-						R.string.networktransfererror, Toast.LENGTH_SHORT);
+						R.string.networktransfererror, Toast.LENGTH_SHORT).show();
 			} else {
 				JSONObject jsonObj = new JSONObject(v);
 				int retcode = Integer.parseInt(jsonObj.getString("retcode"));

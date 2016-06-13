@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ public class RegisterActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_register);
 	}
 
@@ -66,13 +68,13 @@ public class RegisterActivity extends Activity {
 
 		if (psw == null || psw.length() < 4) {
 			Toast.makeText(getApplicationContext(),
-					R.string.registererrorpswlength, Toast.LENGTH_SHORT);
+					R.string.registererrorpswlength, Toast.LENGTH_SHORT).show();
 			((EditText) this.findViewById(R.id.registerPSW)).requestFocus();
 			return;
 		}
 		if (!psw.equals(confirmPsw)) {
 			Toast.makeText(getApplicationContext(),
-					R.string.registererrorpswconfirm, Toast.LENGTH_SHORT);
+					R.string.registererrorpswconfirm, Toast.LENGTH_SHORT).show();
 			((EditText) this.findViewById(R.id.registerConfirmPSW))
 					.requestFocus();
 			return;
@@ -85,7 +87,7 @@ public class RegisterActivity extends Activity {
 			data.put("password", MD5.getMD5(email+pswhash));
 		} catch (NoSuchAlgorithmException e) {
 			Toast.makeText(getApplicationContext(),
-					R.string.registererrormd5error, Toast.LENGTH_SHORT);
+					R.string.registererrormd5error, Toast.LENGTH_SHORT).show();
 			return;
 		}
 		new HttpConnection().post("register", data, registerCallbackListener);
@@ -98,7 +100,7 @@ public class RegisterActivity extends Activity {
 			progressDialog.dismiss();
 			if (v.equals("fail")||v.equals("error")) {
 				Toast.makeText(getApplicationContext(),
-						R.string.networktransfererror, Toast.LENGTH_SHORT);
+						R.string.networktransfererror, Toast.LENGTH_SHORT).show();
 			} else {
 				JSONObject jsonObj = new JSONObject(v);
 				int retcode = Integer.parseInt(jsonObj.getString("retcode"));

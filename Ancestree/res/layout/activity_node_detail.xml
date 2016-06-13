@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,9 +8,110 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.tsp.bupt.ancestree.NodeDetailActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
 
-</RelativeLayout>
+        <EditText
+            android:id="@+id/nodeDetailLastname"
+            style="@style/EditTextStyle"
+            android:ems="10"
+            android:hint="@string/lastname"
+            android:inputType="textPersonName" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/nodeDetailFirstname"
+            style="@style/EditTextStyle"
+            android:ems="10"
+            android:hint="@string/firstname"
+            android:inputType="textPersonName" />
+
+        <LinearLayout
+            style="@style/EditTextStyle"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/gender" />
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/nodeDetailMaleRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:text="@string/male" />
+
+                <RadioButton
+                    android:id="@+id/nodeDetailFemaleRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:text="@string/female" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/nodeDetailBirthday"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="50dp"
+            android:ems="10"
+            android:hint="@string/birthday"
+            android:onClick="openBirthdayPicker" />
+
+        <Switch
+            android:id="@+id/nodeDetailIsAliveSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:checked="true"
+            android:textOff="@string/isdead"
+            android:textOn="@string/isalive" />
+
+        <EditText
+            android:id="@+id/nodeDetailDeathday"
+            style="@style/EditTextStyle"
+            android:ems="10"
+            android:hint="@string/deathday"
+            android:onClick="openDeathdayPicker"
+            android:visibility="gone" />
+        
+        <LinearLayout
+            android:id="@+id/nodeDetailHiddenRelationshipLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical" />
+
+        <Button
+            android:id="@+id/nodeDetailDelete"
+            style="@style/WarningButtonStyle"
+            android:layout_marginTop="50dp"
+            android:onClick="onClickDeleteNode"
+            android:text="@string/deletenode" />
+        
+        <Button
+            android:id="@+id/nodeDetailConfirm"
+            style="@style/ButtonStyle"
+            android:layout_marginTop="10dp"
+            android:text="@string/change"
+            android:onClick="onClickConfirmChange"
+            android:enabled="false" />
+    </LinearLayout>
+
+</ScrollView>

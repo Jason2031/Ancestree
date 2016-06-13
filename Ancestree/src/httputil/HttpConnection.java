@@ -14,6 +14,8 @@ import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.List;
 
+import org.apache.http.HttpStatus;
+
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -128,7 +130,12 @@ public class HttpConnection implements Runnable {
 			OutputStream out = conn.getOutputStream();
     		out.write(params.getBytes());
     		out.close();
-			InputStream in = conn.getInputStream();
+			InputStream in = null;
+			if(conn.getResponseCode()>=HttpStatus.SC_BAD_REQUEST){
+				in=conn.getErrorStream();
+			}else{
+				in=conn.getInputStream();
+			}
 			
 			List<String> cookiesHeader = conn.getHeaderFields().get("Set-Cookie");
 			

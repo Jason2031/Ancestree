@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ public class ResetPswActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_reset_psw);
 	}
 
@@ -69,7 +71,7 @@ public class ResetPswActivity extends Activity {
 			progressDialog.dismiss();
 			if (v.equals("fail")) {
 				Toast.makeText(getApplicationContext(),
-						R.string.networktransfererror, Toast.LENGTH_SHORT);
+						R.string.networktransfererror, Toast.LENGTH_SHORT).show();
 			} else {
 				JSONObject jsonObj = new JSONObject(v);
 				int retcode = Integer.parseInt(jsonObj.getString("retcode"));
