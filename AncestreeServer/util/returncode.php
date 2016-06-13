@@ -12,7 +12,7 @@ $retcode = array(
     'User Not Registered' => '602',
     'Wrong Password' => '603',
     'No Such User' => '604',
-    'Questionnaire Container Full' => '610',
+    'Container Full' => '610',
     'Questionnaire Expired' => '611',
     'Not Enough Points' => '612'
 );

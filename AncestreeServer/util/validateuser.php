@@ -4,7 +4,7 @@ require_once 'returncode.php';
 
 function getusercookie($cookiestr)
 {
-    $rs = DB::select('User', array(
+    $rs = DB::select('Users', array(
         'ID'
     ), array(
         'NonceToken' => $cookiestr

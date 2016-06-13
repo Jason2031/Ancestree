@@ -10,9 +10,6 @@ $headers .= "Content-Transfer-Encoding: 8bit\r\n";
 mail('1509223061@qq.com', $subject, $message, $headers);
 echo 'Done!';*/
 
-echo 'post arg ';
-echo isset($_POST['arg'])?'is set as \''.$_POST['arg'].'\'':'is not set';
-echo '<br/>';
-echo 'get arg ';
-echo isset($_GET['arg'])?'is set as \''.$_GET['arg'].'\'':'is not set';
+$arr=array('retdata'=>array(array('title'=>'234','id'=>'123'),array('title'=>'897','id'=>'567')));
+echo json_encode($arr);
 ?>
